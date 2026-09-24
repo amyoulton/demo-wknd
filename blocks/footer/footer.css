@@ -18,3 +18,71 @@ footer .footer p {
     padding: 40px 32px 24px;
   }
 }
+
+/* wknd theme: dark footer, link rows split by a rule */
+body.wknd footer {
+  background-color: var(--wknd-charcoal);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+body.wknd footer .footer > div {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+body.wknd footer .footer .default-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 10px 0;
+}
+
+body.wknd footer .footer .section:first-child {
+  border-bottom: 1px solid var(--wknd-grey);
+  padding-bottom: 48px;
+}
+
+body.wknd footer .footer .section + .section {
+  padding-top: 48px;
+  color: var(--wknd-grey);
+}
+
+body.wknd footer .footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.wknd footer .footer a:any-link {
+  color: currentcolor;
+}
+
+body.wknd footer .footer img {
+  display: block;
+  width: 87px;
+  height: auto;
+}
+
+@media (width >= 900px) {
+  body.wknd footer .footer .default-content-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  body.wknd footer .footer .section + .section ul {
+    gap: 32px;
+  }
+
+  body.wknd footer .footer .section:first-child ul:first-of-type {
+    gap: 10px;
+  }
+}

@@ -31,3 +31,59 @@
     order: unset;
   }
 }
+
+/* wknd-media variant: text beside a fixed-ratio image */
+.columns.wknd-media h2 {
+  color: #000;
+}
+
+.columns.wknd-media .columns-img-col img {
+  aspect-ratio: 52 / 35;
+  object-fit: cover;
+}
+
+@media (width >= 900px) {
+  .columns.wknd-media > div {
+    justify-content: space-between;
+    gap: 80px;
+  }
+
+  .columns.wknd-media > div > div {
+    flex: 0 1 594px;
+  }
+
+  .columns.wknd-media > div > .columns-img-col {
+    flex: 0 1 520px;
+  }
+}
+
+/* wknd-features variant: short feature blurbs with an accent rule */
+.columns.wknd-features > div {
+  align-items: stretch;
+  gap: 32px;
+}
+
+.columns.wknd-features > div > div {
+  border-left: 3px solid var(--wknd-yellow, #ffeb00);
+  padding: 8px 0 8px 16px;
+}
+
+.columns.wknd-features h3 {
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.columns.wknd-features p {
+  color: var(--wknd-light-text, #ebebeb);
+  line-height: 28px;
+}
+
+@media (width >= 900px) {
+  .columns.wknd-features > div {
+    gap: 48px;
+  }
+}

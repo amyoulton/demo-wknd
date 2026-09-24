@@ -323,3 +323,183 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* wknd theme: applied to pages with metadata `Theme: wknd` */
+body.wknd {
+  --wknd-yellow: #ffeb00;
+  --wknd-charcoal: #202020;
+  --wknd-grey: #909090;
+  --wknd-light: #f7f7f7;
+  --wknd-light-text: #ebebeb;
+  --body-font-family: source-sans, source-sans-fallback, sans-serif;
+  --heading-font-family: source-serif, source-serif-fallback, serif;
+  --text-color: var(--wknd-charcoal);
+
+  color: var(--text-color);
+}
+
+body.wknd main {
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+@font-face {
+  font-family: source-sans-fallback;
+  size-adjust: 93%;
+  src: local('Arial');
+}
+
+@font-face {
+  font-family: source-serif-fallback;
+  size-adjust: 104%;
+  src: local('Georgia');
+}
+
+body.wknd main > .section {
+  margin: 0;
+  padding: 48px 0;
+}
+
+body.wknd main > .section:first-of-type {
+  padding: 0;
+}
+
+body.wknd main > .section > div:not(.hero-wrapper) {
+  max-width: 1200px;
+}
+
+body.wknd main h1,
+body.wknd main h2,
+body.wknd main h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+body.wknd main h2 {
+  font-size: 28px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+body.wknd main p {
+  margin: 16px 0 0;
+}
+
+/* eyebrow: a short paragraph directly above a heading */
+body.wknd main p:has(+ h2) {
+  margin: 0 0 16px;
+  color: var(--wknd-grey);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+body.wknd main a.button:any-link {
+  border-radius: 0;
+  padding: 18px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+body.wknd main a.button.primary {
+  border-color: var(--wknd-yellow);
+  background-color: var(--wknd-yellow);
+  color: var(--wknd-charcoal);
+}
+
+body.wknd main a.button.secondary {
+  border-color: var(--wknd-charcoal);
+  color: var(--wknd-charcoal);
+}
+
+body.wknd main a.button.primary:hover,
+body.wknd main a.button.primary:focus-visible,
+body.wknd main a.button.secondary:hover,
+body.wknd main a.button.secondary:focus-visible {
+  border-color: var(--wknd-charcoal);
+  background-color: var(--wknd-charcoal);
+  color: #fff;
+}
+
+body.wknd main p.button-wrapper {
+  margin: 24px 0 0;
+}
+
+/* wknd section styles */
+body.wknd main .section.light {
+  background-color: var(--wknd-light);
+}
+
+body.wknd main .section.dark {
+  background-color: var(--wknd-charcoal);
+  color: #fff;
+}
+
+body.wknd main .section.dark p:has(+ h2) {
+  color: var(--wknd-yellow);
+}
+
+body.wknd main .section.yellow {
+  background-color: var(--wknd-yellow);
+}
+
+body.wknd main .section.yellow p:has(+ h2) {
+  color: var(--wknd-charcoal);
+}
+
+body.wknd main .section.light .default-content-wrapper,
+body.wknd main .section.dark .default-content-wrapper,
+body.wknd main .section.yellow .default-content-wrapper {
+  text-align: center;
+}
+
+body.wknd main .section > .default-content-wrapper + div {
+  margin-top: 32px;
+}
+
+@media (width >= 900px) {
+  body.wknd {
+    --nav-height: 100px;
+  }
+
+  body.wknd main {
+    font-size: 20px;
+  }
+
+  body.wknd main > .section {
+    padding: 80px 0;
+  }
+
+  body.wknd main h2 {
+    font-size: 36px;
+    line-height: 60px;
+  }
+
+  body.wknd main .section.light h2 {
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  body.wknd main .section.yellow h2 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  body.wknd main .section.yellow .default-content-wrapper p:not(:has(+ h2)) {
+    line-height: 40px;
+  }
+
+  body.wknd main .section > .default-content-wrapper + div {
+    margin-top: 48px;
+  }
+
+  body.wknd main .section.dark > .default-content-wrapper + div {
+    margin-top: 64px;
+  }
+}

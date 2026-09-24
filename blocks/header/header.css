@@ -270,3 +270,38 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+/* wknd theme: logo left, uppercase links right */
+body.wknd header nav .nav-brand img {
+  width: 87px;
+  height: auto;
+  vertical-align: middle;
+}
+
+body.wknd header nav .nav-sections ul {
+  font-size: 16px;
+}
+
+body.wknd header nav .nav-sections .default-content-wrapper > ul > li {
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+body.wknd header nav .nav-sections a:hover {
+  text-decoration: none;
+  box-shadow: inset 0 -2px var(--wknd-yellow);
+}
+
+@media (width >= 900px) {
+  body.wknd header nav {
+    max-width: none;
+    padding: 0 80px;
+  }
+
+  body.wknd header nav .nav-sections .default-content-wrapper > ul {
+    justify-content: flex-end;
+    gap: 48px;
+  }
+}

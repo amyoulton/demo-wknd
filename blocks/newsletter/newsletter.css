@@ -1,0 +1,45 @@
+.newsletter-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter .newsletter-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.newsletter input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 6px 16px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.newsletter button {
+  border: 0;
+  border-radius: 0;
+  padding: 0 20px;
+  background-color: var(--wknd-charcoal, #202020);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.newsletter button:hover,
+.newsletter button:focus-visible {
+  background-color: #000;
+}
